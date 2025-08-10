@@ -1,9 +1,10 @@
 services:
   - type: worker
-    name: telegram-deal-bot
-    env: python
-    buildCommand: ""
+    name: telegram-bot
+    runtime: python
+    buildCommand: pip install -r requirements.txt
     startCommand: python bot.py
     envVars:
       - key: BOT_TOKEN
-        value: 8213067607:AAHwbBRsKRtjtqwceiVQqcSii-tSGit6JNA
+        sync: false
+
